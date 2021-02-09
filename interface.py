@@ -4,11 +4,13 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 import io
+import os
 
 
 # Typically we run this on the same machine
-api_url = "http://127.0.0.1:8000/infer"
-
+#api_url = "http://127.0.0.1:8000/infer"
+api_port=os.environ.get('PORT')
+api_url = "0.0.0.0:"+str(api_port)+"/infer"
 
 cache_dest = Path("data/streamlit_image_cache")
 cache_dest.mkdir(exist_ok=True, parents=True)
