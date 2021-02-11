@@ -4,7 +4,7 @@ from pathlib import Path
 import start_api
 from interface import combine_images, encoding_sentences, preprocess_text
 
-app_formal_name = "Alph The Sacred River"
+app_formal_name = "POE-VIEW"
 
 # Start the app in wide-mode
 st.set_page_config(
@@ -21,7 +21,7 @@ for f_poem in known_poems_dest.glob("*.txt"):
     known_poems[title] = lines
 
 # Select a starting poem and display the choices in the sidebar
-default_poem = "Ozymandias"
+default_poem = "Si muero joven"
 poem_list = list(known_poems.keys())
 poem_choice = st.sidebar.selectbox(
     "Select a starting poem", poem_list, index=poem_list.index(default_poem)
