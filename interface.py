@@ -9,7 +9,8 @@ import os
 
 # Typically we run this on the same machine
 #api_url = "http://127.0.0.1:8000/infer"
-api_port=os.environ.get('PORT')
+#api_port=os.environ.get('PORT')
+api_port=9999
 api_url = "http://0.0.0.0:"+str(api_port)+"/infer"
 
 cache_dest = Path("data/streamlit_image_cache")
@@ -46,12 +47,12 @@ def cache_download(image_idx, expected_height=600):
         return FIN.read()
 
 
-# @st.cache(ttl=10*3600)
+#@st.cache(ttl=10*3600)
 def get_unsplash_image(image_idx):
     return cache_download(image_idx)
 
 
-# @st.cache(ttl=3600)
+#@st.cache(ttl=3600)
 def combine_images(imageIDs, expected_height=600):
     imgs = [get_unsplash_image(idx) for idx in imageIDs]
 
