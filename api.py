@@ -70,7 +70,7 @@ class CLIP:
 
 
 def load_sample_data():
-    with open("docs/collected_poems/kubla_khan.txt") as FIN:
+    with open("docs/collected_poems/Tentación.txt") as FIN:
         sents = FIN.read().split("\n")
 
     sents = [" ".join(line.split()) for line in sents if line.strip()]
