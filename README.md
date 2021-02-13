@@ -85,9 +85,10 @@ files=glob.glob(known_poems_dest+'/*.txt')
 txt_files=[x.replace('\\', '/') for x in files]
 ```
 
-Es posible que se deba descomentar esta línea en los requirements.txt:
+Es posible que se deba cambiar esta línea en los requirements.txt:
 
     pip install torch==1.7.1+cpu torchvision==0.8.2+cpu torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+    
 
 ## (Posible) To do
 
