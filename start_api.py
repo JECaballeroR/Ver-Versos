@@ -10,7 +10,7 @@ import os
 
 
 #api_port=os.environ.get('PORT')
-api_port=9999
+api_port=8000
 
 api_check_url = "http://0.0.0.0:"+str(api_port)
 
